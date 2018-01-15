@@ -4,20 +4,20 @@ Dooer Interview Test - the task is to create a simple application that will disp
 
 Key features:
 
-	* Allow users to get public GitHub repos with their username
-	* Allow users to search the repos
-	* Allow users to add repos to list of favourite repos on their personal computer
+- Allow users to get public GitHub repos with their username
+- Allow users to search the repos
+- Allow users to add repos to list of favourite repos on their personal computer
 
 # Local deployment
 
 After cloning the repository locally:
-	* Download all required npm libraries using the command:
+- Download all required npm libraries using the command:
 
 	```
 	npm install
 	```
 
-	* After installing all libraries, the app can be started using the command:
+- After installing all libraries, the app can be started using the command:
 
 	```
 	npm start
