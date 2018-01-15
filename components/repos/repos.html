@@ -1,0 +1,89 @@
+<link rel="stylesheet" type="text/css" href="assets/css/repos.css">
+
+<!-- Main body of partial html element, rendered on path /repos -->
+<div class="container">
+  <!-- Showing data if login is valid -->
+  <div ng-if="validLogin()">
+
+    <!-- Table showing user details, and logout button -->
+    <h1 class="white-text">Your GitHub repositories</h1>
+    <hr class="repos-line">
+    <div id="left-part">
+      <table>
+        <tbody>
+          <tr>
+            <td class="table-font column-left">GitHub user:</td>
+            <td ng-if="user.name != null" class="table-font">{{user.name}}</td>
+            <td ng-if="user.name == null" class="table-font">Full name not set</td>
+          </tr>
+          <tr>
+            <td class="table-font column-left">GitHub url:</td>
+            <td class="table-font"><a href="{{user.html_url}}" target="_blank">Go to GitHub</a></td>
+          </tr>
+          <tr>
+            <td class="table-font column-left">Number of public repos:</td>
+            <td class="table-font">{{user.public_repos}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="right-part">
+      <button type="button" ng-click="logout()" id="button-logout">LOGOUT</button>
+    </div>  
+
+    <div id="bottom-part">
+
+      <!-- Table showing all user repos from GitHub, with search option -->
+      <hr class="repos-line">
+      <br>
+      <div class="left-table-part">
+        <input type="text" ng-model="search" placeholder="Search your repositories..." class="search-input">
+        <h3 class="white-text">Your repositories</h3>
+        <table class="left-table">
+          <thead>
+            <tr>
+              <th ng-click="sortType='name'">Name</th>
+              <th ng-click="sortType='size'">Size</th>
+              <th>Add favourite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="repo in repos | orderBy:sortType:sortReverse | filter:search">
+              <td class="table-data">{{repo.name}}</td>
+              <td>{{repo.size}}</td>
+              <td><button type="button" ng-click="add(repo)" ng-disabled="repo.disabled" class="button-table">
+                <div ng-if="repo.disabled == false">Add</div>
+                <div ng-if="repo.disabled == true">Added</div>
+              </button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table for showing favourite user repos on local computer -->
+      <div class="right-table-part">
+        <h3 class="white-text">Your favourite repositories</h3>
+        <table class="right-table">
+          <thead>
+            <th ng-click="sortTypeAdded='name'">Name</th>
+              <th ng-click="sortTypeAdded='size'">Size</th>
+              <th>Remove</th>
+          </thead>
+          <tbody>
+            <tr ng-repeat="repo in addedRepos | orderBy:sortTypeAdded:sortReverseAdded">
+              <td class="table-data">{{repo.name}}</td>
+              <td>{{repo.size}}</td>
+              <td><button type="button" ng-click="remove(repo)" class="button-table">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Forbidden data access if user is not logged in -->
+  <div ng-if="!validLogin()">
+    <h1>You are not logged in, please log in before seeing your repositories.</h1>
+    <button type="button" ng-click="logout()">Go to login</button>
+  </div>
+</div>

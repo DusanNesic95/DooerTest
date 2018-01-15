@@ -1,0 +1,176 @@
+/* Elements */
+a {
+  text-decoration: underline;
+  color: white;
+}
+input:focus {
+  outline: none;
+}
+
+/* Classes */
+.table-data {
+  height: 45px;
+}
+.table-font {
+  height: 40px;
+  font-size: 1.1em;
+  color: white;
+}
+.column-left {
+  padding-right: 40px;
+}
+.white-text {
+  color: white;
+}
+.repos-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #96A3A7;
+  margin: 1em 0;
+  padding: 0;
+}
+.repos-row {
+  width: 100%;
+  color: white;
+}
+.user-info-label {
+  width: 20%;
+  float: left;
+}
+.user-info {
+  width: 70%;
+  float: left;
+}
+.search-input {
+  width: 99%;
+  height: 35px;
+  background-color: #E0E0E0;
+  border: none;
+  border-right: 4px;
+  margin: 0px;
+  padding: 0px;
+  color: #26373B;
+  font-size: 1em;
+  padding-left: 5px;
+  margin-left: 2px;
+}
+.left-table-part {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+.left-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.left-table thead th {
+  /*background: #D4E157;*/
+  /*background: #336B87;*/
+  background: #2c3e50;
+  height: 40px !important;
+  color: white;
+}
+.left-table tr td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.left-table tr:nth-child(even) {
+   background-color: #EEEEEE;
+}
+.left-table tr:nth-child(odd) {
+   background-color: #B0BEC5;
+}
+.right-table-part {
+  width: 48%;
+  float: left;
+  margin-top: 35px;
+}
+.right-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.right-table thead th {
+  /*background: #26A69A;*/
+  /*background: #763626;*/
+  /*background: #16a085;*/
+  background: #2c3e50;
+  height: 40px !important;
+  color: white;
+}
+.right-table tr td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.right-table tr:nth-child(even) {
+  background-color: #EEEEEE;
+}
+.right-table tr:nth-child(odd) {
+  background-color: #B0BEC5;
+}
+.button-table {
+  border: none;
+  background-color: #96A3A7;
+  width: 92%;
+  margin-left: 4%;
+  color: #26373B;
+  border-radius: 4px;
+  font-size: 0.8em;
+  height: 30px;
+}
+.button-table:disabled {
+  /*border: 1px solid red;
+  color: red;*/
+  background-color: lightgray;
+  color: white;
+}
+/* IDs */
+#left-part {
+  width: 90%;
+  float: left;
+}
+#right-part {
+  width: 10%;
+  float: right;
+}
+#button-logout {
+  border: none;
+  background-color: #96A3A7;
+  width: 50%;
+  min-width: 100px;
+  height: 25px;
+  color: #26373B;
+  border-radius: 4px;
+  font-weight: bolder;
+  float: right;
+  font-size: 0.8em;
+}
+#bottom-part {
+  width: 100%;
+  float: left;
+}
+
+/*Media queries*/
+@media(max-width: 800px) {
+  .right-table-part {
+    width: 100%;
+    float: none;
+  }
+  .left-table-part {
+    width: 100%;
+    float: none; 
+  }
+  .search-input {
+    width: 99%;
+  }
+}
+@media(max-width: 550px) {
+  #right-part {
+    margin-top: 30px;
+    width: 100%;
+    float: left;
+  }
+  #button-logout {
+    width: 100%;
+  }
+}

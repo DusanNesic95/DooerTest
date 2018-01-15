@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="assets/css/login.css">
+
+<!-- Website logo and brief app description -->
+<img src="assets/img/github_icon.png" alt="GitHub logo." id="logo">
+<h3 class="white-text" id="page-message">Using your GitHub username, see your public repositories.</h3>
+<br>
+
+<!-- Form for inputting GitHub username, with hidden error messages -->
+<div id="center-form">
+  <form>
+    <hr class="login-line">
+    <p class="gray-label">ENTER YOUR GITHUB USERNAME</p>
+    <input type="text" ng-model="username" class="transparent-input" id="input-username" placeholder="ENTER HERE..." autofocus>
+    <button type="submit" ng-click="login()" id="button-login">SHOW YOUR REPOS</button>
+    <div ng-if="emptyInput" id="empty-message">
+      You have to enter GitHub username.
+    </div>
+    <div ng-if="error != ''" id="empty-message">
+      {{error}}
+    </div>
+  </form>
+</div>
+

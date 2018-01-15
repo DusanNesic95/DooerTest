@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dooer Test Interview</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="https://icons.better-idea.org/icon?url=github.com&size=80..120..200" type="image/gif">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body ng-app="dooer">
+    <!-- Using ng-view to load partial html components -->
+	<div ng-view></div>
+
+	<!-- Loading node libraries -->
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="node_modules/ngstorage/ngStorage.min.js"></script>
+	<!-- Loading project files -->
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="shared/apiService.js"></script>
+    <script type="text/javascript" src="components/repos/repos.js"></script>
+    <script type="text/javascript" src="components/login/login.js"></script>
+</body>
+</html>

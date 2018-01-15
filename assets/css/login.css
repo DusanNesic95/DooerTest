@@ -1,0 +1,108 @@
+/* Elements */
+input:focus {
+  outline: none;
+}
+
+/* Classes */
+.white-text {
+  color: white;
+}
+.login-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #96A3A7;
+  margin: 1em 0;
+  padding: 0;
+}
+.gray-label {
+  color: #96A3A7;
+  margin: 0px;
+  padding: 0px;
+}
+.transparent-input {
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #96A3A7;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-size: 1em;
+}
+
+/* IDs */
+#page-title {
+  margin-top: 150px;
+  text-align: center;
+  font-size: 2.5em;
+}
+#page-message {
+  text-align: center;
+  margin-top: 30px;
+}
+#center-form {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+}
+#button-login {
+  border: none;
+  background-color: #96A3A7;
+  width: 100%;
+  height: 45px;
+  color: #26373B;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+#empty-message {
+  width: 100%;
+  height: 36px;
+  background-color: #96A3A7;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: #26373B;
+  text-align: center;
+  padding-top: 12px;
+}
+#logo {
+  display: block;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 130px;
+  height: 130px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #96A3A7;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
+
+@media(max-width: 1000px) {
+  #center-form {
+    width: 50%;
+  }
+  #logo {
+    margin-top: 70px;
+  }
+}
+@media(max-width: 500px) {
+  #center-form {
+    width: 80%;
+  } 
+  #logo {
+    margin-top: 50px;
+  }
+}
