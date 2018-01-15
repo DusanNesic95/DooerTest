@@ -4,6 +4,7 @@
   "description": "Dooer interview test application.",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm install",
     "start": "http-server -a 0.0.0.0 -c-1"
   },
   "author": "Dusan Nesic",
